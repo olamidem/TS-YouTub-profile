@@ -58,15 +58,27 @@ const tabs = [
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(tabs[0].id)
 
-    return <div className="p-4 mt-12">
+    return (
+      <div className="p-4 mt-12">
         <div className="flex border-b border-gray-200">
-            {tabs.map((tab) => (
-                <button key={tab.id}>
-
-                </button>
-            ))}
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={`flex-1 text-center py-2 px-4 font-medium text-sm ${activeTab === tab.id ? "border-b-2" : "text-gray-600"}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              <div className="flex items-Center justify-center space-x-2 cursor-pointer">
+                {tab.icon}
+                <span>{tab.label}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+        <div className="mt-4 p-4 rounded-lg">
+          {tabs.find((tab) => tab.id === activeTab)?.content}
+        </div>
       </div>
-  </div>;
+    );
 };
 
 export default Tabs;
