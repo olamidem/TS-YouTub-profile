@@ -1,5 +1,30 @@
 const About = () => {
-  return <div></div>;
+  return (
+    <section className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
+          About Olamide
+        </h2>
+        <p className="text-lg text-gray-700">
+          Olamide is a talented software engineer with a passion for creating
+          stunning user experiences. Having worked with an extensive range of
+          technologies, frameworks, and programming languages - from React and
+          and php to Python, Golang, and more - his expertise in the field is
+          unparalleled. Olamide's diverse skill set has enabled him to build
+          countless projects for clients around the world, showcasing his
+          ability to adapt and excel in any given environment.
+        </p>
+        <p className="mt-4 text-lg text-gray-700">
+          However, it was his love for User Interface Design that truly set him
+          apart. Olamide's dedication to honing his skills in this area led him
+          down a path of self-discovery, taking advantage of every resource
+          available to him - from online tutorials to workshops and beyond. With
+          his tireless efforts, Olamide has earned his badge as a truly talented
+          Developer.
+        </p>
+      </div>
+    </section>
+  );
 };
 
 export default About;
